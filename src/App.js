@@ -1,9 +1,22 @@
 import Accordion from "./components/Accordion"
+import Dropdown from "./components/Dropdown"
+
+function App() {
+
+    const options = [
+        {
+            label: 'red', value: 'red'
+        },
+        {
+            label: 'Green', value: 'green'
+        }, {
+            label: 'Blue', value: 'blue'
+        },
+    ]
 
 
-function App(){
+    return <Dropdown options={options} />
 
- return <Accordion/>
 }
 
 export default App
