@@ -2,6 +2,7 @@ import { useState } from "react"
 import {GoChevronDown,GoChevronLeft} from "react-icons/go"
 
 function Accordion({ items }) {
+
     const [expandedIndex,setExpandedIndex]=useState(false)
 
     const handleClick = (nextIndex) =>{
@@ -32,6 +33,7 @@ function Accordion({ items }) {
             </div>
         )
     })
+    
     return <div className="border-x border-t rounded">
         {renderedItems}
     </div>

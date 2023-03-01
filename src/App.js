@@ -1,7 +1,15 @@
 import Accordion from "./components/Accordion"
 import Dropdown from "./components/Dropdown"
+import { useState } from "react"
+
 
 function App() {
+
+    const[selection,setSelection] = useState(null)
+
+    const handleSelect = (option) =>{
+        setSelection(option)
+    }
 
     const options = [
         {
@@ -15,7 +23,7 @@ function App() {
     ]
 
 
-    return <Dropdown options={options} />
+    return <Dropdown value={selection} onChange={handleSelect} options={options} />
 
 }
 
